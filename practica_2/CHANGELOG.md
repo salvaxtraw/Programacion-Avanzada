@@ -1,19 +1,35 @@
 # CHANGELOG
 
+Todos los cambios importantes en este repositorio se documentan en este archivo.
+
+---
+
 ## 2026-03-09
 
 ### python_no_opt.py
-Versión 1.0.0 → 1.1.0
 
-Cambios:
-- Optimización de algoritmo de frecuencias usando diccionario.
-- Eliminación de bucles while anidados O(n²).
-- Mejora de legibilidad del código.
+Versión anterior: 1.0.0
+Nueva versión: 1.1.0
+
+Cambios realizados:
+
+* Optimización del cálculo de frecuencias utilizando un diccionario.
+* Eliminación de bucles `while` anidados innecesarios.
+* Mejora en la claridad y mantenibilidad del código.
+* Se agregó medición de tiempo para análisis de rendimiento.
+
+---
 
 ### c_no_opt.c
-Versión 1.0.0 → 1.1.0
 
-Cambios:
-- Optimización del cálculo de primos usando límite sqrt(n).
-- Eliminación de código redundante.
-- Uso de break para finalizar búsqueda de divisores.
+Versión anterior: 1.0.0
+Nueva versión: 1.1.0
+
+Cambios realizados:
+
+* Optimización del algoritmo de verificación de números primos.
+* Se limitó la búsqueda de divisores hasta √n.
+* Se agregó `break` para terminar la búsqueda al encontrar divisor.
+* Eliminación de ramas redundantes.
+* Se agregó medición de tiempo de ejecución.
+
