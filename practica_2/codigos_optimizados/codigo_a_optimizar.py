@@ -1,59 +1,62 @@
+```python
 # python_no_opt.py
 # Versión: 1.1.0
-# Autores: Estrada Pulido Salvador y Saldaña Ramírez César Augusto 
+# Autor: Salvador Estrada Pulido
 # Fecha: 2026-03-09
 # Descripción:
-# Este programa calcula la frecuencia de una lista de números,
-# determina el valor modal y calcula la suma de los dígitos del modo.
+# Calcula las frecuencias de una lista de enteros, encuentra el modo
+# y calcula la suma de los dígitos del modo.
 #
 # Entrada:
 # Lista de números enteros
 #
 # Salida:
-# Frecuencias de cada número
-# Valor modal
-# Suma de los dígitos del modo
-# MOD: v1.1.0 — optimización usando diccionario en lugar de búsqueda O(n²)
+# Frecuencias
+# Modo
+# Suma de dígitos del modo
+# Tiempo de ejecución (para benchmarking)
+# MOD: v1.1.0 — optimización usando diccionario O(n) y medición de tiempo
 
-# Lista de números de ejemplo
+import time
+# inicio del benchmark
+inicio = time.time()
+# lista de números
 numeros = [3, -1, 0, 5, -7, 0, 2, 3, 3, -1, 5, 5, 5]
-# Diccionario para almacenar frecuencias
+# diccionario de frecuencias
 frecuencias = {}
-# Recorrer lista de números
+# recorrer lista
 for n in numeros:
-    # Si el número ya está en el diccionario
+    # si ya existe incrementar
     if n in frecuencias:
-        # Incrementar contador
-        frecuencias[n] = frecuencias[n] + 1
+        frecuencias[n] += 1
+    # si no existe inicializar
     else:
-        # Inicializar contador
         frecuencias[n] = 1
-# Buscar el modo
+# variables para el modo
 modo = None
-# Contador máximo
 max_cuenta = -1
-# Recorrer diccionario
+# recorrer diccionario
 for valor, cuenta in frecuencias.items():
-    # Comparar frecuencia actual
+    # comparar frecuencia
     if cuenta > max_cuenta:
-        # Actualizar máximo
+        # actualizar valores
         max_cuenta = cuenta
-        # Guardar modo
         modo = valor
-# Copia del modo para manipulación
+# copia del modo
 x = modo
-# Si es negativo convertir a positivo
+# convertir a positivo
 if x < 0:
     x = -x
-# Suma de dígitos
+# suma de dígitos
 suma_digitos = 0
-# Mientras queden dígitos
 while x > 0:
-    # Agregar último dígito
     suma_digitos = suma_digitos + (x % 10)
-    # Eliminar último dígito
     x = x // 10
-# Salida de resultados
+# fin del benchmark
+fin = time.time()
+tiempo = (fin - inicio) * 1000
+# resultados
 print("Frecuencias:", frecuencias)
 print("Modo:", modo, "con cuenta:", max_cuenta)
 print("Suma de dígitos del modo:", suma_digitos)
+print("Tiempo de ejecución (ms):", tiempo)
