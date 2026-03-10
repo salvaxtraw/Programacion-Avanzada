@@ -1,4 +1,3 @@
-```python
 # python_no_opt.py
 # Versión: 1.1.0
 # Autor: Salvador Estrada Pulido
