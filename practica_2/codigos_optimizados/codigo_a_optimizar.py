@@ -1,6 +1,6 @@
 # python_no_opt.py
 # Versión: 1.1.0
-# Autor: Salvador Estrada Pulido
+# Autores: Estrada Pulido Salvador y Saldaña Ramírez César Augusto 
 # Fecha: 2026-03-09
 # Descripción:
 # Este programa calcula la frecuencia de una lista de números,
