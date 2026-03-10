@@ -1,4 +1,3 @@
-```c
 /* c_no_opt.c
    Versión: 1.1.0
    Autor: Salvador Estrada Pulido
