@@ -1,25 +1,31 @@
-/* c_no_opt.c
-   Versión: 1.1.0
-   Autor: Salvador Estrada Pulido
-   Fecha: 2026-03-09
+/*
+Versión: 1.1.0
+Autor: Salvador Estrada Pulido
+Fecha: 2026-03-09
 
-   Descripción:
-   Encuentra todos los números primos desde 2 hasta N,
-   cuenta cuántos existen, suma su valor y clasifica
-   primos pares e impares.
+Descripción:
+Encuentra todos los números primos desde 2 hasta N,
+cuenta cuántos existen, suma su valor y clasifica
+primos pares e impares.
 
-   Entrada:
-   N (entero)
+Entrada:
+N (entero)
 
-   Salida:
-   Número de primos
-   Suma de primos
-   Primos pares
-   Primos impares
-   Tiempo de ejecución
+Salida:
+Número de primos
+Suma de primos
+Primos pares
+Primos impares
+Tiempo de ejecución
 */
 
-/* MOD: v1.1.0 — optimización usando sqrt(n) y medición de tiempo */
+/* 
+MOD: v1.1.0 — Cambio menor, se ajusto d++ a d+=2 ya que no es necesario 
+calcular divisores pares si ya fueron descartados.
+Igualmente se arreglo la estructura de los comentarios para facilitar
+la lectura
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -32,14 +38,13 @@ int main() {
     int primos_impares = 0;
     for (int m = 2; m <= N; m++) {
         int es_primo = 1;
-        int d = 2;
-        /* probar divisores hasta sqrt(m) */
+        int d = 2; // Cambio de la version
         while (d * d <= m) {
             if (m % d == 0) {
                 es_primo = 0;
                 break;
             }
-            d++;
+            d += 2;
         }
         if (es_primo) {
             count_primos++;
