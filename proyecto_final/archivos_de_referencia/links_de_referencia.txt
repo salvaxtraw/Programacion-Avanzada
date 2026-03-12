@@ -1,1 +1,3 @@
 Modulo de carga: https://forum.arduino.cc/t/tp4056-circuit-schematic/1404367
+Placa Raspberry Pi Pico: https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
+Conexion entre OLED y Raspberry: https://www.instructables.com/How-to-Use-an-OLED-Display-With-Raspberry-Pi-Pico/
