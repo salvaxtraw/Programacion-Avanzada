@@ -1,7 +1,7 @@
 /*
-Versión: 1.1.0
-Autor: Salvador Estrada Pulido
-Fecha: 2026-03-09
+Versión: 1.2.1
+Autor: Saldaña Ramirez Cesar Augusto
+Fecha: 2026-03-12
 
 Descripción:
 Encuentra todos los números primos desde 2 hasta N,
@@ -20,10 +20,7 @@ Tiempo de ejecución
 */
 
 /* 
-MOD: v1.1.0 — Cambio menor, se ajusto d++ a d+=2 ya que no es necesario 
-calcular divisores pares si ya fueron descartados.
-Igualmente se arreglo la estructura de los comentarios para facilitar
-la lectura
+MOD: v1.2.1 — Se corrigio el autor y la fecha
 */
 
 #include <stdio.h>
