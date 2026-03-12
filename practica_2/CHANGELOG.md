@@ -33,3 +33,26 @@ Cambios realizados:
 * Eliminación de ramas redundantes.
 * Se agregó medición de tiempo de ejecución.
 
+---
+
+### 2026-03-12
+
+### codigo_a_optimizar.c
+
+Versión anterior: 1.1.0
+Nueva versión: 1.2.0 y 1.2.1
+
+* Hubo errores considerables en las 2 versiones por error de Valanny, por lo que no hay cambios pertinentes.
+
+---
+
+### 2026-03-12
+
+### codigo_a_optimizar.c
+
+Versión anterior: 1.2.1
+Nueva versión: 1.3.0
+
+* Correccion de comentarios.
+* Correccion pertinente que debian ser la 1.2.0 y 1.2.1, pero no funcionaban.
+* Se eliminaron 2 if en if(es_primo) para solo agregar uno al inicio.
