@@ -2,6 +2,12 @@ programa,version,run,tiempo_ms
 python_no_opt,1.1.0,1,7.2
 python_no_opt,1.1.0,2,6.9
 python_no_opt,1.1.0,3,7.1
+
+
+programa,version,run,tiempo_ms
 c_no_opt,1.1.0,1,33
 c_no_opt,1.1.0,2,32
 c_no_opt,1.1.0,3,34
+c_opt,1.3.0,1,0.02
+c_opt,1.3.0,2,0.003
+c_opt,1.3.0,3,0.011
