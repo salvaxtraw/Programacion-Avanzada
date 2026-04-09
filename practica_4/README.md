@@ -21,3 +21,6 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 
 # Instalar dependencias
 pip install matplotlib numpy
+
+# Para este despliegue, utilizamos el modo simulación para validar la detección de picos:
+python src/run_acquisition.py --mode sim --duration 60 --interval 1
