@@ -23,17 +23,20 @@ def iniciar_server():
     con, addr = server.accept()
     print(f"(Servidor) Conectado")
 
-    def recv():
+    def recv(): # Recive
         while True:
             try:
-                data = con.recv(1024).decode()
+                data = con.recv(1024).decode() # Los datos posibles a mandar llegan hasta 1024 bytes
                 if not data:
                     break
                 print(f"\n(Cliente) {data}")
             except:
                 break
 
-    threading.Thread(target=recv, daemon=True)
+# El threading se usa para poder tener varias instancias (en este caso texto cliente - servidor) al mismo tiempo
+# asi uno escucha y el otro escribe
+
+    threading.Thread(target=recv, daemon=True) 
     while True:
         msg = input()
         con.send(msg.encode())
