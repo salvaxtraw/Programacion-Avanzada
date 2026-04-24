@@ -1,0 +1,27 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+
+# --- Logs y Resultados de Pruebas ---
+# Ignoramos el contenido de los logs pero mantenemos la carpeta
+results/logs/*.log
+# Ignoramos los archivos recibidos para no llenar el repo de basura
+results/received/*
+# Excepto el .gitkeep si decides usarlo para mantener la carpeta vacía
+!results/received/.gitkeep
+
+# --- Entorno y Configuración ---
+.env
+.vscode/
+.idea/
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
