@@ -1,5 +1,5 @@
 # server_chat.py
-# Versión: 1.0.1
+# Versión: 1.1.1
 # Autor: Saldaña Ramirez Cesar Augusto
 # Fecha: 2026-04-24
 # Descripción:
