@@ -1,5 +1,5 @@
 # server_chat.py
-# Versión: 1.1.1
+# Versión: 1.1.2
 # Autor: Saldaña Ramirez Cesar Augusto
 # Fecha: 2026-04-24
 # Descripción:
@@ -20,7 +20,7 @@ def iniciar_server():
     server.listen(1) # Listen
     print(f"(Servidor) Esperando coneccion con el cliente...")
 
-    con, addr = server.accept()
+    con = server.accept()
     print(f"(Servidor) Conectado")
 
     def recv(): # Recive
