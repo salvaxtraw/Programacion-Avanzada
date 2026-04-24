@@ -1,5 +1,5 @@
 # server_chat.py
-# Versión: 1.1.2
+# Versión: 1.1.3
 # Autor: Saldaña Ramirez Cesar Augusto
 # Fecha: 2026-04-24
 # Descripción:
@@ -20,8 +20,8 @@ def iniciar_server():
     server.listen(1) # Listen
     print(f"(Servidor) Esperando coneccion con el cliente...")
 
-    con = server.accept()
-    print(f"(Servidor) Conectado")
+    con, addr = server.accept()
+    print(f"(Servidor) Conectado desde {addr}")
 
     def recv(): # Recive
         while True:
@@ -36,7 +36,7 @@ def iniciar_server():
 # El threading se usa para poder tener varias instancias (en este caso texto cliente - servidor) al mismo tiempo
 # asi uno escucha y el otro escribe
 
-    threading.Thread(target=recv, daemon=True) 
+    threading.Thread(target=recv, daemon=True).start()
     while True:
         msg = input()
         con.send(msg.encode())
