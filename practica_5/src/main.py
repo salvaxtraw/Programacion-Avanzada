@@ -1,5 +1,5 @@
 # main.py
-# Versión: 1.0.0
+# Versión: 1.0.1
 # Autor: Saldaña Ramirez Cesar Augusto
 # Fecha: 2026-04-24
 # Descripción:
@@ -16,8 +16,8 @@ def iniciar_server():
     server.listen(1)
     print(f"(Servidor) Esperando coneccion con el cliente...")
 
-    con = server.accept()
-    print(f"(Servidor) Conectado")
+    con, addr = server.accept()
+    print(f"(Servidor) Conectado desde {addr}")
 
     def recv():
         while True:
@@ -29,7 +29,7 @@ def iniciar_server():
             except:
                 break
 
-    threading.Thread(target=recv, daemon=True) 
+    threading.Thread(target=recv, daemon=True).start()
     while True:
         msg = input()
         con.send(msg.encode())
@@ -55,10 +55,11 @@ def iniciar_cliente():
         cliente.send(msg.encode())
 
 if __name__ == "__main__":
-    modo = input("Server o Cliente?").strip().lower()
-    if modo == "Server":
+    modo = input("Eres? (servidor/cliente)").strip().lower()
+
+    if modo == "servidor":
         iniciar_server()
-    elif modo == "Cliente":
+    elif modo == "cliente":
         iniciar_cliente()
     else:
         print("Error")
