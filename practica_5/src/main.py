@@ -1,11 +1,18 @@
 # main.py
-# Versión: 1.0.1
+# Versión: 1.1.0
 # Autor: Saldaña Ramirez Cesar Augusto
 # Fecha: 2026-04-24
 # Descripción:
 # Defs de server y cliente en un solo codigo
 
-import socket, threading
+import socket, threading, logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='test.log',
+    filemode='a'
+)
 
 Host = '0.0.0.0'
 Port = 5000 
@@ -14,10 +21,10 @@ def iniciar_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((Host, Port)) 
     server.listen(1)
-    print(f"(Servidor) Esperando coneccion con el cliente...")
+    logging.info(f"(Servidor) Esperando coneccion con el cliente...")
 
     con, addr = server.accept()
-    print(f"(Servidor) Conectado desde {addr}")
+    logging.info(f"(Servidor) Conectado desde {addr}")
 
     def recv():
         while True:
@@ -25,7 +32,7 @@ def iniciar_server():
                 data = con.recv(1024).decode()
                 if not data:
                     break
-                print(f"\n(Cliente) {data}")
+                logging.info(f"\n(Cliente) {data}")
             except:
                 break
 
@@ -37,7 +44,7 @@ def iniciar_server():
 def iniciar_cliente():
     cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
     cliente.connect(('192.168.100.3', 5000))
-    print(f"(Cliente) Conexion completada...")
+    logging.info(f"(Cliente) Conexion completada...")
 
     def recv():
         while True:
@@ -45,7 +52,7 @@ def iniciar_cliente():
                 data = cliente.recv(1024).decode() 
                 if not data:
                     break
-                print(f"\n(Servidor) {data}")
+                logging.info(f"\n(Servidor) {data}")
             except:
                 break
 
