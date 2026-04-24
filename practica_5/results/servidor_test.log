@@ -1,0 +1,6 @@
+2026-04-24 03:53:00,017 - INFO - (Servidor) Esperando coneccion con el cliente...
+2026-04-24 03:53:02,622 - INFO - (Servidor) Conectado desde ('192.168.100.4', 58245)
+2026-04-24 03:53:11,591 - INFO - 
+(Cliente) Hola que tal, soy el cliente, BlackyPie
+2026-04-24 03:53:37,147 - INFO - 
+(Cliente) Hagamos un poco mas de contacto para demostrar un mejor .log
