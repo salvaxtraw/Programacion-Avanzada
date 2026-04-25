@@ -1,5 +1,6 @@
 # CHANGELOG 
-Aquí se tendrá registro de los cambios realizados a lo largo de la práctica
+
+Aquí se tendrá registro de los cambios realizados a lo largo de la práctica y desarrollo del presente código
 ---
 ## 04/23/2026 - 01:00
 - Creado carpeta ```practica_5``` con archivos y carpetas correspondientes
